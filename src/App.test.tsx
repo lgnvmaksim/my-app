@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from '@testing-library/react';
+import Sudents from './homework-PS.1/Sudents';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const { getByText } = render(<Sudents />);
+  const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
